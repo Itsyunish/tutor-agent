@@ -1,17 +1,23 @@
-import os
-from pydantic import SecretStr
+import secrets
+from typing import Literal
+
+from pydantic import AnyHttpUrl, EmailStr, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-class Settings(BaseSettings):
-    google_api_key: SecretStr
-    pinecone_api_key: SecretStr
-    mailtrap_api_key: SecretStr
-    index_host: SecretStr
 
+class Settings(BaseSettings):   
     model_config = SettingsConfigDict(
         env_file=".env",
-        env_file_encoding="utf-8",
+        env_ignore_empty=True,
+        extra="ignore",
     )
-
-settings = Settings()
-UPLOAD_DIR = os.path.join(os.getcwd(), "uploads")
+    
+    PINECONE_API_KEY: str
+    PINECONE_HOST: str
+    GOOGLE_API_KEY: str
+    
+    # REDIS_SERVER_DEV: str
+    REDIS_SERVER: str
+    
+        
+settings = Settings() 
