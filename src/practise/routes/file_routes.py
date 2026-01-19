@@ -5,9 +5,7 @@ from pathlib import Path
 from src.practise.store.pinecone import PineconeService
 import uuid
 from practise.agent._agent import GetResponse
-from langchain_core.runnables import Runnable, RunnableMap
 from dotenv import load_dotenv
-from langchain_core.output_parsers import StrOutputParser   
 from pinecone import Pinecone
 from practise.config import settings 
 from fastapi import FastAPI
