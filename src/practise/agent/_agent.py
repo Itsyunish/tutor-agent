@@ -2,13 +2,10 @@ from langchain.agents import AgentExecutor, create_tool_calling_agent
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from practise.store.redis import get_chathistory
 from langchain_core.prompts import ChatPromptTemplate
-import datetime
-from langchain.memory import ConversationBufferMemory
-from langchain_google_genai import ChatGoogleGenerativeAI
 from practise.llm.gemini_llm import get_llm
 from practise.tools.tools import GetTools 
 
-llm = get_llm()
+llm = get_llm() 
 
 class GetResponse:
     def __init__(self, **data):
