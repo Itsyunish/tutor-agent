@@ -9,7 +9,7 @@ llm = get_llm()
 
 class GetResponse:
     def __init__(self, **data):
-        
+        """set the attributes"""
         for key,value in data.items():
             setattr(self,key,value) 
         self.llm = llm
