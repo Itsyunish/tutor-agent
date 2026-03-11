@@ -1,8 +1,8 @@
 # RAG FastAPI Project
 
-This project is a **Retrieval-Augmented Generation (RAG) API** built with FastAPI. It leverages LangChain, Pinecone, Redis, and Google's Generative AI to create a conversational AI that can answer questions based on uploaded documents.
+This project is a **Retrieval-Augmented Generation (RAG) API** built with FastAPI. It leverages LangChain, Pinecone, Redis, and Google's Generative AI to create a conversational AI that can answer queries based on uploaded documents.
 
-## Features
+## Features 
 
 -   **Document Upload:** Upload PDF files to be processed and stored.
 -   **Text Processing:** Documents are chunked into smaller pieces for efficient embedding and retrieval.
