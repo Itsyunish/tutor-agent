@@ -5,7 +5,8 @@ from pydantic import AnyHttpUrl, EmailStr, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
-class Settings(BaseSettings):   
+class Settings(BaseSettings): 
+    """set the config variables"""
     model_config = SettingsConfigDict(
         env_file=".env",
         env_ignore_empty=True,
